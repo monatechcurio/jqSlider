@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <title>Number line slider</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+  <style>
+
+.sliderticks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.sliderticks p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 1px;
+  background: #D3D3D3;
+  height: 15px;
+  line-height: 40px;
+  margin: 0 0 20px 0;
+  padding-top: 5px;
+}
+  </style>
+  <script>
+  $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: -5,
+      max: 5,
+      values: [ 0, 1 ]
+    });
+  } );
+  </script>
+</head>
+<body>
+
+<p>
+<div class="range">
+  <div id="slider-range">
+  <div class="sliderticks">
+    <p>-5</p>
+    <p>-4</p>
+    <p>-3</p>
+    <p>-2</p>
+    <p>-1</p>
+    <p>0</p>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+  </div>
+  </div>
+</div>
+</p>
+</body>
+</html>
